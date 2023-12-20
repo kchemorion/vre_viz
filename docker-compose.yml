@@ -1,0 +1,10 @@
+version: '3'
+services:
+  http-server:
+    image: node:14
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: ["http-server", "-p", "8008"]
+    ports:
+      - "8008:8008"
