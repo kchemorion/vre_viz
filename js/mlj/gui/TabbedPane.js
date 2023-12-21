@@ -4662,20 +4662,27 @@
         
             // Add table rows
             for (var i = 0; i < fieldsToDisplay.length; i++) {
-                var key = fieldsToDisplay[i];
-                var $row = $('<tr></tr>');
-                $row.append($('<td>' + key + '</td>').css({
-                    'border': '1px solid #ddd',
-                    'padding': '8px',
-                    'text-align': 'left'
-                }));
-                $row.append($('<td>' + fileContent[key] + '</td>').css({
-                    'border': '1px solid #ddd',
-                    'padding': '8px',
-                    'text-align': 'left'
-                }));
-                $table.append($row);
-            }
+              var key = fieldsToDisplay[i];
+              var $row = $('<tr></tr>');
+              $row.append($('<td>' + key + '</td>').css({
+                  'border': '1px solid #ddd',
+                  'padding': '8px',
+                  'text-align': 'left'
+              }));
+          
+              // Format the value to two decimal places if it's a number
+              var value = fileContent[key];
+              if (!isNaN(value)) {
+                  value = parseFloat(value).toFixed(2);
+              }
+          
+              $row.append($('<td>' + value + '</td>').css({
+                  'border': '1px solid #ddd',
+                  'padding': '8px',
+                  'text-align': 'left'
+              }));
+              $table.append($row);
+          }
         
             $content.append($table);
             return $content;
