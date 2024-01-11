@@ -8,7 +8,7 @@ COPY default.conf /etc/nginx/conf.d/default.conf
 COPY . /usr/share/nginx/html
 
 # Expose port 8889
-EXPOSE 8889
+EXPOSE 80
 
 # Start Nginx when the container has provisioned.
 CMD ["nginx", "-g", "daemon off;"]
