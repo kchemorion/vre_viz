@@ -103,7 +103,7 @@
             });
 
             home.onClick(function () {
-                window.location.href = "https://spineview.io";
+                window.location.href = "https://spineview.upf.edu";
             });
         }
 
