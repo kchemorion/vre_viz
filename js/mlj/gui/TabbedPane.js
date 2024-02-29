@@ -3778,14 +3778,17 @@
         function createFileContent(prefix) {
             var reversedPrefix = prefix.split('_').reverse().join('_'); // Reversing the format
             var fileContent = jsonData[reversedPrefix];
-            var $content = $('<div></div>');
+            var $content = $('<div></div>').css({
+              'max-height': '300px', // Adjust this value based on your needs
+              'overflow-y': 'auto', // Optional, for spacing
+          });
         
             // Specify the fields to display
-            var fieldsToDisplay = ['AH', 'NPP', 'CBH', 'CTH', 'PAHR', 'CD', 'SD'];
+            var fieldsToDisplay = ['PH', 'MH', 'AH', 'CTH', 'CBH', 'PAHR', 'SD', 'CD', 'SCDR','NPP','AFPZSA','AFAZSA','NPSA','CTSA','CBSA','AFV','NPV','CTV','CBV'];
         
             // Create a table
             var $table = $('<table></table>').css({
-                'font-size': '1.2em',
+                'font-size': '1.1em',
                 'border-collapse': 'collapse',
                 'width': '100%',
                 'margin-top': '10px'

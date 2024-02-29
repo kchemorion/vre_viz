@@ -10,11 +10,12 @@
     var _Logo = function () {
 
         var LOGO_WIDTH = 96;
+        // var LOGO_HEIGHT = 821 * LOGO_WIDTH / 1023;
         var LOGO_HEIGHT = 821 * LOGO_WIDTH / 1023;
         var insets = 10;
         var _PiP;
         var _dialog = new MLJ.gui.component.Dialog(
-            {title: "filter meshes according to different features", draggable: true, width: 1500, modal: true, resizable: false}
+            {title: "filter meshes according to different features", draggable: true, width: 1220, modal: true, resizable: true}
         );
 
         this._make = function () {                 
@@ -25,7 +26,7 @@
 
             _dialog.appendContent(
                 '<div class="airtable-embed">'
-                + '<iframe title="SpineView" width="1495px" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiZWFhMGM4YWUtODcwOS00Y2EyLTg5ZGUtZTNmZmUxNjkwZDc5IiwidCI6IjQyZTFiNDJmLWRlNzQtNDI5MC05ZDNhLTExNDkyNTUzMTM1ZSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>'
+                + '<iframe title="SpineView" width="1200px" height="600px" src="https://app.powerbi.com/view?r=eyJrIjoiZWFhMGM4YWUtODcwOS00Y2EyLTg5ZGUtZTNmZmUxNjkwZDc5IiwidCI6IjQyZTFiNDJmLWRlNzQtNDI5MC05ZDNhLTExNDkyNTUzMTM1ZSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>'
                 + '</div>' + MLJ.core.plugin.Manager.getFilterPlugins().size() + " filters."
             );
 
