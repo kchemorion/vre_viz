@@ -21,8 +21,7 @@
         <link rel="stylesheet" href="js/include/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css">
         <link rel="stylesheet" href="js/include/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css">       
         <link rel="stylesheet" href="css/style.css">
-        <script src="https://kit.fontawesome.com/3b924a323a.js" crossorigin="anonymous"></script>
-
+        
         <script src="js/include/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>        
         <script src="js/include/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 
@@ -75,7 +74,7 @@
         <script src="js/mlj/plugins/filters/Measure.js"></script>
         <script src="js/mlj/plugins/filters/Color.js"></script>
         <script src="js/mlj/plugins/filters/Quality.js"></script>
-
+        
         <script src="js/mlj/plugins/rendering/Axes.js"></script> 
         <script src="js/mlj/plugins/rendering/BackgroundGrid.js"></script> 
         <script src="js/mlj/plugins/rendering/Global.js"></script> 
@@ -149,7 +148,10 @@
     <body>    
       <nav>
         <ul>
+    
+    
               <li>
+                
                   <a href="#" data-bs-toggle="modal" data-bs-target="#contributionsModal" >
                       <i class="fas fa-hand-holding-heart"></i> Contributions
                   </a>
@@ -164,7 +166,7 @@
                       <i class="fas fa-download"></i> Downloads&nbsp;&nbsp;    
                   </a>
               </li>
-              <li class="logo" style="margin-top: 3px;">
+              <li class="logo" style="margin-right: -10%; margin-top: 3px;">
                   <img src="spineview.png" alt="Logo">
               </li>
           </ul>
@@ -172,134 +174,36 @@
     
       <!-- Contributions Modal -->
       <div class="modal fade" id="contributionsModal" tabindex="-1" aria-labelledby="contributionsModalLabel"
-      aria-hidden="true" >
+      aria-hidden="true">
       <div class="modal-dialog">
-          <div class="modal-content" style="width: 105%;">
+          <div class="modal-content">
               <div class="modal-header">
                   <h5 class="modal-title" id="contributionsModalLabel">Contributions</h5>
               </div>
 
 
+
               <div class="modal-body">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-                <style>
-                    table {
-                        width: 80%;
-                        border-collapse: collapse;
-                    }
-                    th, td {
-                        text-align: center;
-                        border: 1px solid #ddd;
-                        padding: 8px;
-                    }
-                    th {
-                        background-color: #f2f2f2;
-                    }
-                    a {
-                        display: inline-block;
-                        margin: 0 5px;
-                    }
-                </style>
-                <table>
-                    <tr>
-                        <th>Author</th>
-                        <th><i class="fas fa-home" title="Home"></i></th>
-                        <th><i class="fas fa-envelope" title="Email"></i></th>
-                        <th><i class="fa-brands fa-square-x-twitter"></i></th>
-                        <th><i class="fab fa-github" title="GitHub"></i></th>
-                        <th><i class="fas fa-graduation-cap" title="Google Scholar"></i></th>
-                        <th><i class="fab fa-orcid" title="ORCID"></i></th>
-                        <th><i class="fab fa-researchgate" title="ResearchGate"></i></th>
-                        <th><i class="fab fa-linkedin" title="LinkedIn"></i></th>
-                        <th><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 599 260">
-                            <g fill="none" fill-rule="evenodd">
-                              <path fill="#000" d="M483 180.265V249h-26V60h26v14.735C495.302 64.002 511.392 57.5 529 57.5c38.66 0 70 31.34 70 70s-31.34 70-70 70c-17.608 0-33.698-6.502-46-17.235zm46-6.765c-25.957 0-47-21.043-47-47s21.043-47 47-47 47 21.043 47 47-21.043 47-47 47zM0 0h25v156c0 10.667 7.667 16 23 16 1.333 4.667 4.333 11.667 9 21H34c-21 0-34-21-34-37V0zm382 197.5c-38.66 0-70-31.34-70-70s31.34-70 70-70 70 31.34 70 70-31.34 70-70 70zm0-24c25.957 0 47-21.043 47-47s-21.043-47-47-47-47 21.043-47 47 21.043 47 47 47z"/>
-                              <path fill="#DA2032" d="M178 194c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64 35.346 0 64 28.654 64 64 0 35.346-28.654 64-64 64zm0-22c27.062 0 49-21.938 49-49s-21.938-49-49-49-49 21.938-49 49 21.938 49 49 49z"/>
-                              <path fill="#F7941E" d="M178 214c-46.392 0-84-37.608-84-84s37.608-84 84-84 84 37.608 84 84-37.608 84-84 84zm3.5-18c39.488 0 71.5-32.012 71.5-71.5S220.988 53 181.5 53 110 85.012 110 124.5s32.012 71.5 71.5 71.5z"/>
-                              <path fill="#D5CD25" d="M178 236c-58.542 0-106-47.458-106-106S119.458 24 178 24s106 47.458 106 106-47.458 106-106 106zm4-21c49.706 0 90-40.294 90-90s-40.294-90-90-90-90 40.294-90 90 40.294 90 90 90z"/>
-                              <path fill="#757600" d="M178 260c-71.797 0-130-58.203-130-130S106.203 0 178 0s130 58.203 130 130-58.203 130-130 130zm5.5-21c61.027 0 110.5-49.473 110.5-110.5S244.527 18 183.5 18 73 67.473 73 128.5 122.473 239 183.5 239z"/>
-                            </g>
-                          </svg></th>
-                    </tr>
-                    <!-- Example row for Estefano Munoz-Moya -->
-                    <tr>
-                        <td>Estefano Munoz-Moya <sup>1, ∗</sup></td>
-                        <td><a href="https://estefano23.github.io/">X</a></td>
-                        <td><a href="mailto:estefano.munoz.moya@gmail.com">X</a></td>
-                        <td><a href="https://x.com/estefanoMunoz23">X</a></td>
-                        <td><a href="https://github.com/estefano23/">X</a></td>
-                        <td><a href="https://scholar.google.com/citations?user=eT1mgk0AAAAJ&hl">X</a></td>
-                        <td><a href="https://orcid.org/0000-0001-5222-4071">X</a></td>
-                        <td><a href="https://www.researchgate.net/profile/Estefano-Munoz-Moya">X</a></td>
-                        <td><a href="https://www.linkedin.com/in/estefano-munoz-moya/">X</a></td>
-                        <td><a href="https://loop.frontiersin.org/people/1555265/publications">X</a></td>
-                    </tr>
-                    <!-- Add rows for other authors in the same format -->
-                    <tr>
-                        <td>Carlos Ruiz Wills <sup>2</sup></td>
-                        <td><a href="https://www.upf.edu/web/simbiosys/people/-/asset_publisher/XtdsMnNRpXfH/content/ruiz-wills-carlos/maximized">X</a></td>
-                        <td><a href="mailto:carlos.ruiz@upf.edu">X</a></td>
-                        <td><a href="https://twitter.com/cruizwills">X</a></td>
-                        <td><a href="#">X</a></td>
-                        <td><a href="https://scholar.google.com/citations?user=sCaJkkoAAAAJ">X</a></td>
-                        <td><a href="https://orcid.org/0000-0002-7475-8557">X</a></td>
-                        <td><a href="https://www.researchgate.net/profile/Carlos-Ruiz-Wills">X</a></td>
-                        <td><a href="https://es.linkedin.com/in/carlos-ruiz-wills-23924052">X</a></td>
-                        <td><a href="https://loop.frontiersin.org/people/588063/publications">X</a></td>
-                    </tr>
-                    <tr>
-                        <td>Morteza Rasouligandomani<sup>2</sup></td>
-                        <td><a href="https://www.upf.edu/web/simbiosys/people/-/asset_publisher/2h1s00p2oc8E/content/rasouligandomani-morteza/maximized">X</a></td>
-                        <td><a href="mailto:morteza.rasouli@upf.edu">X</a></td>
-                        <td><a href="https://twitter.com/MortezaRG">X</a></td>
-                        <td><a href="#">X</a></td>
-                        <td><a href="https://scholar.google.com/citations?user=GIiNE5MAAAAJ&hl=en&oi=sra">X</a></td>
-                        <td><a href="https://orcid.org/0000-0003-2396-2328">X</a></td>
-                        <td><a href="https://www.researchgate.net/profile/Morteza-Rasouligandomani">X</a></td>
-                        <td><a href="https://www.linkedin.com/in/morteza-rasouligandomani-4a68065a">X</a></td>
-                        <td><a href="https://loop.frontiersin.org/people/2138876/publications">X</a></td>
-                    </tr>
-                    <tr>
-                        <td>Francis Chemorion<sup>1,2</sup></td>
-                        <td><a href="https://disc4all.upf.edu/bio/francis-chemorion/">X</a></td>
-                        <td><a href="mailto:francis.chemorion01@estudiant.upf.edu">X</a></td>
-                        <td><a href="https://twitter.com/fkchemorion">X</a></td>
-                        <td><a href="https://github.com/kchemorion">X</a></td>
-                        <td><a href="https://scholar.google.com/citations?user=upAnje8AAAAJ&hl=en">X</a></td>
-                        <td><a href="https://orcid.org/0000-0002-2099-0035">X</a></td>
-                        <td><a href="https://www.researchgate.net/profile/Francis-Chemorion">X</a></td>
-                        <td><a href="https://www.linkedin.com/in/francis-chemorion/">X</a></td>
-                        <td><a href="https://loop.frontiersin.org/people/2449392/publications">X</a></td>
-                    </tr>
-                    <tr>
-                        <td>Gemma Piella<sup>2</sup></td>
-                        <td><a href="https://www.upf.edu/web/simbiosys/people/-/asset_publisher/dei3rtMP0xmk/content/piella-fenoy-gemma/maximized">X</a></td>
-                        <td><a href="mailto:gemma.piella@upf.edu">X</a></td>
-                        <td><a href="https://twitter.com/GemmaPiella">X</a></td>
-                        <td><a href="#">X</a></td>
-                        <td><a href="https://scholar.google.com/citations?user=Q6zjCpsAAAAJ&hl=en">X</a></td>
-                        <td><a href="https://orcid.org/0000-0001-5236-5819">X</a></td>
-                        <td><a href="https://www.researchgate.net/profile/Gemma-Piella">X</a></td>
-                        <td><a href="https://www.linkedin.com/in/gemma-piella-a234b4/">X</a></td>
-                        <td><a href="https://loop.frontiersin.org/people/383139/publications">X</a></td>
-                    </tr>
-                    <tr>
-                        <td>Jérôme Noailly<sup>1</sup></td>
-                        <td><a href="https://www.upf.edu/web/etic/computational-biology-and-biomedical-systems/-/asset_publisher/MKlA53ZqmAS8/content/noailly-j%C3%A9r%C3%B4me-bernard/maximized">X</a></td>
-                        <td><a href="mailto:jerome.noailly@upf.edu">X</a></td>
-                        <td><a href="https://twitter.com/jeromenoailly">X</a></td>
-                        <td><a href="#">X</a></td>
-                        <td><a href="https://scholar.google.es/citations?user=YFvwxpwAAAAJ&hl=ca&oi=sra">X</a></td>
-                        <td><a href="https://orcid.org/0000-0003-3446-7621">X</a></td>
-                        <td><a href="https://www.researchgate.net/profile/Jerome-Noailly-2">X</a></td>
-                        <td><a href="https://www.linkedin.com/in/jnoailly/">X</a></td>
-                        <td><a href="https://loop.frontiersin.org/people/59318/publications">X</a></td>
-                    </tr>
-                </table>
-                <p>1. BCN MedTech, Department of Information and Communication Technologies, Universitat Pompeu Fabra, Barcelona, Spain<br>
-                   2. IT, Department of Information Technology, InSilicoTrials Technologies, Trieste, Italy
+                <p>
+                    <b>Authors</b>
+                    </br>Estefano Munoz-Moya <sup>1, ∗</sup>,
+                    </br>Morteza Rasouligandomani <sup>2</sup>,
+                    </br>Carlos Ruiz Wills <sup>2</sup>,
+                    </br>Francis Chemorion <sup>1, 2</sup>,
+                    </br>Gemma Piella <sup>2</sup>, and
+                    </br>Jérôme Noailly <sup>1</sup>
+                </p>
+                <p>
+                    <b>Affiliations</b>
+                    </br>1. BCN MedTech, Department of Information and Communication Technologies, Universitat Pompeu Fabra, Barcelona, Spain
+                    </br>2. IT, Department of Information Technology, InSilicoTrials Technologies, Trieste, Italy
                 </p>
             </div>
+            
+
+
+
+
           </div>
       </div>
     </div>
@@ -351,9 +255,9 @@
 
     // Map suffixes to colors
     const suffixColors = {
-        "_AF.stl": "#FF0000",
-        "_CEP.stl": "#FF0000",
-        "_NP.stl": "#FF0000",
+        "_AF.stl": "red",
+        "_CEP.stl": "blue",
+        "_NP.stl": "green",
     };
 
     // Generate filenames based on the prefix and common suffixes
@@ -396,7 +300,16 @@ $(document).on("MeshFileOpened", function (event, meshFile) {
         openFiles();
     };
 </script>
-  
+
+
+
+
+
+
+
+
+        
+        
         
     </body>
 
