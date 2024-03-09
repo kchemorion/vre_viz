@@ -4,7 +4,7 @@
         var _this = this;
 
         // Prepare the modal content
-        var modalContent = "<img src='IVDspineView-1.png' style='width:70%;'>"; // Customize this content
+        var modalContent = "<img src='IVDspineView-1.png' style='width:100%;'>"; // Customize this content
         
         // Create the modal but don't show it yet
         var _$logModal = $('<div id="logModal" title="Log Details">' + modalContent + '</div>').hide();
@@ -18,7 +18,7 @@
         }).click(function () {
             _$logModal.dialog({
                 modal: true,
-                width: '75%', // or 'auto'
+                width: '920px', // or 'auto'
                 height: 'auto',
                 open: function() {
                     // Optional: Any action to take when the modal opens
