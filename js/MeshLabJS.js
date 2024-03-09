@@ -49,11 +49,13 @@
 
     var _$hideBtn = $('<span class="ui-icon ui-icon-arrowthick-1-w"></span>');
 
-    var _$pane = $('<div id="mlj-tools-pane"></div>')
-            .css({
-                display: "table-cell"
-            })
-            .data("visible", true);
+var _$pane = $('<div id="mlj-tools-pane"></div>')
+        .css({
+            display: "table-cell",
+            width: "96.84%" // Set your desired initial width here
+        })
+        .data("visible", true);
+
 
     var _$3D = $('<div id="_3D"></div>');
 
@@ -84,8 +86,11 @@
         _$wrapper.append(_$pane, _$border);
 
         _$pane.resizable({
-            handles: "e"
+            handles: "e",
+            minWidth: 200, // Minimum width during resize
+            maxWidth: 500 // Maximum width during resize
         });
+        
 
         $('body').append(_$3D, _$wrapper, makeTitle(title));
 
