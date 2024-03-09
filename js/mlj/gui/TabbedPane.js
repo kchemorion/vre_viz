@@ -3775,11 +3775,12 @@
             $("#tab-Rendering").outerHeight(_$tabbedPane.height() - _$tabsBar.outerHeight());
             _$rendPane.outerHeight($("#tab-Rendering").height() - _renderingTb.$.outerHeight());
         }
+        
         function createFileContent(prefix) {
             var reversedPrefix = prefix.split('_').reverse().join('_'); // Reversing the format
             var fileContent = jsonData[reversedPrefix];
             var $content = $('<div></div>').css({
-              'max-height': '300px', // Adjust this value based on your needs
+              'max-height': '84%', // Adjust this value based on your needs
               'overflow-y': 'auto', // Optional, for spacing
           });
         
