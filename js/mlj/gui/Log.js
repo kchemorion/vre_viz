@@ -1,91 +1,43 @@
-/**
- * MLJLib
- * MeshLabJS Library
- * 
- * Copyright(C) 2015
- * Paolo Cignoni 
- * Visual Computing Lab
- * ISTI - CNR
- * 
- * All rights reserved.
- *
- * This program is free software; you can redistribute it and/or modify it under 
- * the terms of the GNU General Public License as published by the Free Software 
- * Foundation; either version 2 of the License, or (at your option) any later 
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT 
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
- * FOR A PARTICULAR PURPOSE. See theGNU General Public License 
- * (http://www.gnu.org/licenses/gpl.txt) for more details.
- * 
- */
-
-/**
- * @file Defines and installs the Log widget the text area used like standard output 
- * @author Stefano Gabriele
- */
 (function (component) {
-    
-    /**         
-     * @class Create a new Log widget
-     * @augments  MLJ.gui.Widget
-     * @private
-     * @memberOf MLJ.gui.widget
-     * @author Stefano Gabriele 
-     */
-    var _Log = function () {
 
+    var _Log = function () {
         var _this = this;
 
-        //Console output redirecting ...
-        var _log = console.log, _warn = console.warn, _error = console.error;
-
-        console.log = function (message, args) {
-            var m = args ? message + " " + args : message;
-            _this.append(m);
-            _log.apply(console, arguments);
-        };
-
-        console.warn = function (message, args) {
-            var m = args ? message + " " + args : message;
-            _this.append(m);
-            _warn.apply(console, arguments);
-        };
-
-        console.error = function (message, args) {
-            var m = args ? message + " " + args : message;
-            _this.append(m);
-            _error.apply(console, arguments);
-        };
-
-        var _$log = $('<textarea/>')
-                .attr("spellcheck", false)
-                .attr("readonly", "readonly");
+        // Prepare the modal content
+        var modalContent = "<img src='IVDspineView-1.png' style='width:70%;'>"; // Customize this content
         
-        /**
-         * @author Stefano Gabriele
-         */
+        // Create the modal but don't show it yet
+        var _$logModal = $('<div id="logModal" title="Log Details">' + modalContent + '</div>').hide();
+        $('body').append(_$logModal);
+
+        // Button setup to trigger the modal
+        var _$logButton = $('<button/>', {
+            type: 'button',
+            class: 'btn btn-primary',
+            text: 'Legend',
+        }).click(function () {
+            _$logModal.dialog({
+                modal: true,
+                width: '75%', // or 'auto'
+                height: 'auto',
+                open: function() {
+                    // Optional: Any action to take when the modal opens
+                },
+                close: function() {
+                    // Optional: Any action to take when the modal closes
+                }
+            }); 
+        });
+
+        // Append the button to the widget wrapper
         this._make = function () {
             var $wrap = $('<div/>').attr("id", "mlj-log-widget");
-            $wrap.append(_$log);
+            $wrap.append(_$logButton);
             return $wrap;
-        };
-        
-        /**
-         * Appends text to Log
-         * @param {String} text The text to append
-         * @author Stefano Gabriele
-         */
-        this.append = function (text) {
-            _$log.append(text + "\n");
-            _$log.scrollTop(_$log[0].scrollHeight - _$log.height());
         };
     };
 
     MLJ.extend(MLJ.gui.Widget, _Log);
-
-    //Install widget
     MLJ.gui.installWidget("Log", new _Log());
 
 })(MLJ.gui.component);

@@ -3780,7 +3780,7 @@
             var reversedPrefix = prefix.split('_').reverse().join('_'); // Reversing the format
             var fileContent = jsonData[reversedPrefix];
             var $content = $('<div></div>').css({
-              'max-height': '84%', // Adjust this value based on your needs
+              'max-height': '91.5%', // Adjust this value based on your needs
               'overflow-y': 'auto', // Optional, for spacing
           });
         
@@ -3856,7 +3856,7 @@
             };
 
 
-            _$tabsBar.append('<li>' + fileTab.prefix + ' Morphological Features</li>'); // Corrected appending
+            _$tabsBar.append('<li>Morphological Features</li>'); // Corrected appending
             _$tabbedPane.append(fileTab.$content);
 
             resize();

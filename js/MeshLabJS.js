@@ -52,7 +52,7 @@
 var _$pane = $('<div id="mlj-tools-pane"></div>')
         .css({
             display: "table-cell",
-            width: "96.84%" // Set your desired initial width here
+            width: "96.82%" // Set your desired initial width here
         })
         .data("visible", true);
 
