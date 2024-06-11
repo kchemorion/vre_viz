@@ -102,9 +102,38 @@
         
 
         <style>
+    
         .custom-modal-dialog {
-        max-width: 50%; /* Adjust the percentage as needed */
-    }
+            max-width: 50%; /* Adjust the percentage as needed */
+            margin: auto;
+        }
+    
+        .custom-modal-content {
+            width: 70%;
+        }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        th, td {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 8px;
+            word-wrap: break-word; /* Ensure text wraps within cells */
+        }
+    
+        th {
+            background-color: #f2f2f2;
+        }
+    
+        a {
+            display: inline-block;
+            margin: 0 5px;
+        }
+   
+    
 
           nav {
             background-color: #E0E0E0;
@@ -166,7 +195,7 @@
             </li>
               <li>
                   <a href="#" data-bs-toggle="modal" data-bs-target="#downloadsModal" style="border-right: 1px solid; border-left: 1px solid blue;">
-                      <i class="fas fa-download"></i> Downloads    
+                      <i class="fas fa-download"></i> Downloads &nbsp&nbsp
                   </a>
               </li>
               <li id="modelNameDisplay" style="color: #111; margin-top: 15px; display: inline-flex; align-items: center; margin-right: 15px; margin-left: 15px;">
@@ -182,37 +211,6 @@
           </ul>
       </nav>
     
-      <style>
-        .custom-modal-dialog {
-            max-width: 60%; /* Adjust the percentage as needed */
-            margin: auto;
-        }
-    
-        .custom-modal-content {
-            width: 60%;
-        }
-    
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-    
-        th, td {
-            text-align: center;
-            border: 1px solid #ddd;
-            padding: 8px;
-            word-wrap: break-word; /* Ensure text wraps within cells */
-        }
-    
-        th {
-            background-color: #f2f2f2;
-        }
-    
-        a {
-            display: inline-block;
-            margin: 0 5px;
-        }
-    </style>
     
     <!-- Contributions Modal -->
     <div class="modal fade" id="contributionsModal" tabindex="-1" aria-labelledby="contributionsModalLabel" aria-hidden="true">
@@ -321,7 +319,8 @@
                             <td><a href="https://loop.frontiersin.org/people/59318/publications">X</a></td>
                         </tr>
                     </table>
-                    <p>1. BCN MedTech, Department of Engineering, Universitat Pompeu Fabra, Barcelona, Spain<br>
+                    <br>
+                    <p>1. BCN MedTech, Department of Engineering, Universitat Pompeu Fabra, Barcelona, Spain<br><br>
                        2. IT, Department of Information Technology, InSilicoTrials Technologies, Trieste, Italy
                     </p>
                 </div>
@@ -352,32 +351,35 @@
     
 
     
-    <!-- Downloads Modal -->
-    <div class="modal fade" id="downloadsModal" tabindex="-1" aria-labelledby="downloadsModalLabel" aria-hidden="true">
-        <div class="modal-dialog custom-modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="downloadsModalLabel">Downloads</h5>
+<!-- Downloads Modal -->
+<div class="modal fade" id="downloadsModal" tabindex="-1" aria-labelledby="downloadsModalLabel" aria-hidden="true">
+    <div class="modal-dialog custom-modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="downloadsModalLabel">Downloads</h5>
+            </div>
+            <div class="modal-body">
+                <div class="citation-box position-relative">
+                    <button class="copy-button btn btn-outline-secondary position-absolute" style="top: 0; right: 0;" id="copyButton">
+                        <i class="fa fa-copy"></i>
+                    </button>
+                    <pre id="citation-text" class="border p-3 text-wrap"> <br>
+                        Muñoz-Moya E, Rasouligandomani M, Ruiz Wills C, Chemorion FK, Piella G and Noailly J (2024) Unveiling interactions between intervertebral disc morphologies and mechanical behavior through personalized finite element modeling. Front. Bioeng. Biotechnol. 12:1384599. doi: 10.3389/fbioe.2024.1384599
+                    </pre>
                 </div>
-                <div class="modal-body">
-                    <div class="citation-box">
-                        <button class="copy-button" onclick="copyCitation()">Copy</button>
-                        <p id="citation-text">Citation: Muñoz-Moya E, Rasouligandomani M, Ruiz Wills C, Chemorion FK, Piella G and Noailly J (2024) Unveiling interactions between intervertebral disc morphologies and mechanical behavior through personalized finite element modeling. Front. Bioeng. Biotechnol. 12:1384599. doi: 10.3389/fbioe.2024.1384599</p>
-                    </div>
-                    <div class="form-check agree-checkbox">
-                        <input type="checkbox" class="form-check-input" id="agreeCheckbox">
-                        <label class="form-check-label" for="agreeCheckbox">I agree to use the above citation when using the data.</label>
-                    </div>
-                    <a href="https://zenodo.org/records/8325042" id="downloadLink">
-                        <button class="btn btn-primary" id="downloadButton" disabled>Complete .INP file download</button>
-                    </a>
+                <div class="form-check agree-checkbox mt-3">
+                    <input type="checkbox" class="form-check-input" id="agreeCheckbox">
+                    <label class="form-check-label" for="agreeCheckbox">I agree to use the above citation when using this data.</label>
                 </div>
+                <button class="btn btn-primary mt-3" id="downloadButton" disabled>Complete .INP file download</button>
             </div>
         </div>
     </div>
-  
+</div>
 
-  <script >
+
+<script>
+    // Existing code for handling URL parameters and file operations
     const urlParams = new URLSearchParams(window.location.search);
     let filenamePrefix = urlParams.get('filenamePrefix') || 'GENERIC_L4L5';
 
@@ -386,6 +388,7 @@
     // Update the navigation bar with the model name and level
     document.getElementById('modelName').textContent = modelName;
     document.getElementById('modelLevel').textContent = modelLevel;
+    
     // Define common suffixes for the filenames
     const suffixes = [
         "_AF.stl",
@@ -409,37 +412,80 @@
         });
     }
 
-// Custom function to apply color to a mesh
-function applyColorToMesh(mesh, colorHex) {
-    // Check if the mesh and its material are valid
-    if (mesh && mesh.material) {
-        mesh.material.color = new THREE.Color(colorHex);
-        mesh.material.needsUpdate = true;
-    } else {
-        // console.error("Mesh or material not found for color application.");
+    // Custom function to apply color to a mesh
+    function applyColorToMesh(mesh, colorHex) {
+        // Check if the mesh and its material are valid
+        if (mesh && mesh.material) {
+            mesh.material.color = new THREE.Color(colorHex);
+            mesh.material.needsUpdate = true;
+        } else {
+            // console.error("Mesh or material not found for color application.");
+        }
     }
-}
 
-// Modified event handler
-$(document).on("MeshFileOpened", function (event, meshFile) {
-    const filename = meshFile.fileName;
-    const suffix = filename.substring(filename.lastIndexOf('_'));
-    const color = suffixColors[suffix] || "defaultColor";
+    // Modified event handler
+    $(document).on("MeshFileOpened", function (event, meshFile) {
+        const filename = meshFile.fileName;
+        const suffix = filename.substring(filename.lastIndexOf('_'));
+        const color = suffixColors[suffix] || "defaultColor";
 
-    // Apply color to the mesh
-    applyColorToMesh(meshFile.threeMesh, color);
+        // Apply color to the mesh
+        applyColorToMesh(meshFile.threeMesh, color);
 
-    // Re-render the scene to reflect color changes
-    MLJ.core.Scene.render();
-});
-
+        // Re-render the scene to reflect color changes
+        MLJ.core.Scene.render();
+    });
 
     MLJ.core.plugin.Manager.run();
     MLJ.gui.makeGUI("");
     Module['onRuntimeInitialized'] = function() {
         openFiles();
     };
+
+    // New code for handling modal functionalities
+
+    // Function to copy text to clipboard
+    function copyCitation() {
+        const citationText = document.getElementById('citation-text').innerText;
+        const textarea = document.createElement('textarea');
+        textarea.value = citationText;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        // Optional: Show a confirmation message
+        alert('Citation copied to clipboard');
+    }
+
+    // Function to toggle download button state
+    function toggleDownloadButton() {
+        const checkbox = document.getElementById('agreeCheckbox');
+        const downloadButton = document.getElementById('downloadButton');
+        downloadButton.disabled = !checkbox.checked;
+
+        // Dynamically set the href attribute based on checkbox state
+        if (checkbox.checked) {
+            downloadButton.onclick = function() {
+                window.location.href = 'https://zenodo.org/records/8325042';
+            };
+        } else {
+            downloadButton.onclick = null;
+        }
+    }
+
+    // Event listener for the checkbox to toggle download button state
+    document.getElementById('agreeCheckbox').addEventListener('change', toggleDownloadButton);
+
+    // Initialize download button state
+    toggleDownloadButton();
+
+    // Event listener for the copy button to copy text
+    document.getElementById('copyButton').addEventListener('click', copyCitation);
+
 </script>
+
+    
   
         
     </body>
