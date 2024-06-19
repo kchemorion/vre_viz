@@ -181,314 +181,330 @@
       </style>
     </head>
     <body>    
-      <nav>
-        <ul>
-              <li>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#contributionsModal" >
-                      <i class="fas fa-hand-holding-heart"></i> Contributions
-                  </a>
+        <nav>
+          <ul>
+                <li>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#contributionsModal" >
+                        <i class="fas fa-hand-holding-heart"></i> Contributions
+                    </a>
+                </li>
+                <li>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#docModal" style="border-left: 1px solid blue;">
+                      <i class="fas fa-file-pdf"></i> Documentation   
+                  </a>                
               </li>
-              <li>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#docModal" style="border-left: 1px solid blue;">
-                    <i class="fas fa-file-pdf"></i> Documentation   
-                </a>                
-            </li>
-              <li>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#downloadsModal" style="border-right: 1px solid; border-left: 1px solid blue;">
-                      <i class="fas fa-download"></i> Downloads &nbsp&nbsp
-                  </a>
+                <li>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#downloadsModal" style="border-right: 1px solid; border-left: 1px solid blue;">
+                        <i class="fas fa-download"></i> Downloads &nbsp&nbsp
+                    </a>
+                </li>
+                <li id="modelNameDisplay" style="color: #111; margin-top: 15px; display: inline-flex; align-items: center; margin-right: 15px; margin-left: 15px;">
+                  <i class="fas fa-cube" style="margin-right: 5px;"></i>Model&nbsp:&nbsp <span id="modelName">GENERIC</span>
               </li>
-              <li id="modelNameDisplay" style="color: #111; margin-top: 15px; display: inline-flex; align-items: center; margin-right: 15px; margin-left: 15px;">
-                <i class="fas fa-cube" style="margin-right: 5px;"></i>Model&nbsp:&nbsp <span id="modelName">GENERIC</span>
-            </li>
-            <li id="modelLevelDisplay" style="color: #111; margin-top: 15px; display: inline-flex; align-items: center;">
-                <i class="fas fa-layer-group" style="margin-right: 5px;"></i>Level&nbsp:&nbsp <span id="modelLevel">L4L5</span>
-            </li>
-            
-              <li class="logo" style="margin-top: 3px; margin-right: -9%;">
-                  <img src="spineview.png" alt="Logo">
+              <li id="modelLevelDisplay" style="color: #111; margin-top: 15px; display: inline-flex; align-items: center;">
+                  <i class="fas fa-layer-group" style="margin-right: 5px;"></i>Level&nbsp:&nbsp <span id="modelLevel">L4L5</span>
               </li>
-          </ul>
-      </nav>
-    
-    
-    <!-- Contributions Modal -->
-    <div class="modal fade" id="contributionsModal" tabindex="-1" aria-labelledby="contributionsModalLabel" aria-hidden="true">
-        <div class="modal-dialog custom-modal-dialog">
-            <div class="modal-content custom-modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="contributionsModalLabel">Contributions</h5>
-                </div>
-                <div class="modal-body">
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-                    <table>
-                        <tr>
-                            <th>Author</th>
-                            <th><i class="fas fa-home" title="Home"></i></th>
-                            <th><i class="fas fa-envelope" title="Email"></i></th>
-                            <th><i class="fa-brands fa-square-x-twitter"></i></th>
-                            <th><i class="fab fa-github" title="GitHub"></i></th>
-                            <th><i class="fas fa-graduation-cap" title="Google Scholar"></i></th>
-                            <th><i class="fab fa-orcid" title="ORCID"></i></th>
-                            <th><i class="fab fa-researchgate" title="ResearchGate"></i></th>
-                            <th><i class="fab fa-linkedin" title="LinkedIn"></i></th>
-                            <th>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 599 260" width="20" height="20">
-                                    <g fill="none" fill-rule="evenodd">
-                                        <path fill="#000" d="M483 180.265V249h-26V60h26v14.735C495.302 64.002 511.392 57.5 529 57.5c38.66 0 70 31.34 70 70s-31.34 70-70 70c-17.608 0-33.698-6.502-46-17.235zm46-6.765c-25.957 0-47-21.043-47-47s21.043-47 47-47 47 21.043 47 47-21.043 47-47 47zM0 0h25v156c0 10.667 7.667 16 23 16 1.333 4.667 4.333 11.667 9 21H34c-21 0-34-21-34-37V0zm382 197.5c-38.66 0-70-31.34-70-70s31.34-70 70-70 70 31.34 70 70-31.34 70-70 70zm0-24c25.957 0 47-21.043 47-47s-21.043-47-47-47-47 21.043-47 47 21.043 47 47 47z"/>
-                                        <path fill="#DA2032" d="M178 194c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64 35.346 0 64 28.654 64 64 0 35.346-28.654 64-64 64zm0-22c27.062 0 49-21.938 49-49s-21.938-49-49-49-49 21.938-49 49 21.938 49 49 49z"/>
-                                        <path fill="#F7941E" d="M178 214c-46.392 0-84-37.608-84-84s37.608-84 84-84 84 37.608 84 84-37.608 84-84 84zm3.5-18c39.488 0 71.5-32.012 71.5-71.5S220.988 53 181.5 53 110 85.012 110 124.5s32.012 71.5 71.5 71.5z"/>
-                                        <path fill="#D5CD25" d="M178 236c-58.542 0-106-47.458-106-106S119.458 24 178 24s106 47.458 106 106-47.458 106-106 106zm4-21c49.706 0 90-40.294 90-90s-40.294-90-90-90-90 40.294-90 90 40.294 90 90 90z"/>
-                                        <path fill="#757600" d="M178 260c-71.797 0-130-58.203-130-130S106.203 0 178 0s130 58.203 130 130-58.203 130-130 130zm5.5-21c61.027 0 110.5-49.473 110.5-110.5S244.527 18 183.5 18 73 67.473 73 128.5 122.473 239 183.5 239z"/>
-                                    </g>
-                                </svg>
-                            </th>
-                        </tr>
-                        <!-- Example row for Estefano Munoz-Moya -->
-                        <tr>
-                            <td>Estefano Munoz-Moya <sup>1, ∗</sup></td>
-                            <td><a href="https://estefano23.github.io/">X</a></td>
-                            <td><a href="mailto:estefano.munoz.moya@gmail.com">X</a></td>
-                            <td><a href="https://x.com/estefanoMunoz23">X</a></td>
-                            <td><a href="https://github.com/estefano23/">X</a></td>
-                            <td><a href="https://scholar.google.com/citations?user=eT1mgk0AAAAJ&hl">X</a></td>
-                            <td><a href="https://orcid.org/0000-0001-5222-4071">X</a></td>
-                            <td><a href="https://www.researchgate.net/profile/Estefano-Munoz-Moya">X</a></td>
-                            <td><a href="https://www.linkedin.com/in/estefano-munoz-moya/">X</a></td>
-                            <td><a href="https://loop.frontiersin.org/people/1555265/publications">X</a></td>
-                        </tr>
-                        <!-- Add rows for other authors in the same format -->
-                        <tr>
-                            <td>Carlos Ruiz Wills <sup>2</sup></td>
-                            <td><a href="https://www.upf.edu/web/simbiosys/people/-/asset_publisher/XtdsMnNRpXfH/content/ruiz-wills-carlos/maximized">X</a></td>
-                            <td><a href="mailto:carlos.ruiz@upf.edu">X</a></td>
-                            <td><a href="https://twitter.com/cruizwills">X</a></td>
-                            <td><a href="#">X</a></td>
-                            <td><a href="https://scholar.google.com/citations?user=sCaJkkoAAAAJ">X</a></td>
-                            <td><a href="https://orcid.org/0000-0002-7475-8557">X</a></td>
-                            <td><a href="https://www.researchgate.net/profile/Carlos-Ruiz-Wills">X</a></td>
-                            <td><a href="https://es.linkedin.com/in/carlos-ruiz-wills-23924052">X</a></td>
-                            <td><a href="https://loop.frontiersin.org/people/588063/publications">X</a></td>
-                        </tr>
-                        <tr>
-                            <td>Morteza Rasouligandomani<sup>2</sup></td>
-                            <td><a href="https://www.upf.edu/web/simbiosys/people/-/asset_publisher/2h1s00p2oc8E/content/rasouligandomani-morteza/maximized">X</a></td>
-                            <td><a href="mailto:morteza.rasouli@upf.edu">X</a></td>
-                            <td><a href="https://twitter.com/MortezaRG">X</a></td>
-                            <td><a href="#">X</a></td>
-                            <td><a href="https://scholar.google.com/citations?user=GIiNE5MAAAAJ&hl=en&oi=sra">X</a></td>
-                            <td><a href="https://orcid.org/0000-0003-2396-2328">X</a></td>
-                            <td><a href="https://www.researchgate.net/profile/Morteza-Rasouligandomani">X</a></td>
-                            <td><a href="https://www.linkedin.com/in/morteza-rasouligandomani-4a68065a">X</a></td>
-                            <td><a href="https://loop.frontiersin.org/people/2138876/publications">X</a></td>
-                        </tr>
-                        <tr>
-                            <td>Francis Chemorion<sup>1,2</sup></td>
-                            <td><a href="https://disc4all.upf.edu/bio/francis-chemorion/">X</a></td>
-                            <td><a href="mailto:francis.chemorion01@estudiant.upf.edu">X</a></td>
-                            <td><a href="https://twitter.com/fkchemorion">X</a></td>
-                            <td><a href="https://github.com/kchemorion">X</a></td>
-                            <td><a href="https://scholar.google.com/citations?user=upAnje8AAAAJ&hl=en">X</a></td>
-                            <td><a href="https://orcid.org/0000-0002-2099-0035">X</a></td>
-                            <td><a href="https://www.researchgate.net/profile/Francis-Chemorion">X</a></td>
-                            <td><a href="https://www.linkedin.com/in/francis-chemorion/">X</a></td>
-                            <td><a href="https://loop.frontiersin.org/people/2449392/publications">X</a></td>
-                        </tr>
-                        <tr>
-                            <td>Gemma Piella<sup>2</sup></td>
-                            <td><a href="https://www.upf.edu/web/simbiosys/people/-/asset_publisher/dei3rtMP0xmk/content/piella-fenoy-gemma/maximized">X</a></td>
-                            <td><a href="mailto:gemma.piella@upf.edu">X</a></td>
-                            <td><a href="https://twitter.com/GemmaPiella">X</a></td>
-                            <td><a href="#">X</a></td>
-                            <td><a href="https://scholar.google.com/citations?user=Q6zjCpsAAAAJ&hl=en">X</a></td>
-                            <td><a href="https://orcid.org/0000-0001-5236-5819">X</a></td>
-                            <td><a href="https://www.researchgate.net/profile/Gemma-Piella">X</a></td>
-                            <td><a href="https://www.linkedin.com/in/gemma-piella-a234b4/">X</a></td>
-                            <td><a href="https://loop.frontiersin.org/people/383139/publications">X</a></td>
-                        </tr>
-                        <tr>
-                            <td>Jérôme Noailly<sup>1</sup></td>
-                            <td><a href="https://www.upf.edu/web/etic/computational-biology-and-biomedical-systems/-/asset_publisher/MKlA53ZqmAS8/content/noailly-j%C3%A9r%C3%B4me-bernard/maximized">X</a></td>
-                            <td><a href="mailto:jerome.noailly@upf.edu">X</a></td>
-                            <td><a href="https://twitter.com/jeromenoailly">X</a></td>
-                            <td><a href="#">X</a></td>
-                            <td><a href="https://scholar.google.es/citations?user=YFvwxpwAAAAJ&hl=ca&oi=sra">X</a></td>
-                            <td><a href="https://orcid.org/0000-0003-3446-7621">X</a></td>
-                            <td><a href="https://www.researchgate.net/profile/Jerome-Noailly-2">X</a></td>
-                            <td><a href="https://www.linkedin.com/in/jnoailly/">X</a></td>
-                            <td><a href="https://loop.frontiersin.org/people/59318/publications">X</a></td>
-                        </tr>
-                    </table>
-                    <br>
-                    <p>1. BCN MedTech, Department of Engineering, Universitat Pompeu Fabra, Barcelona, Spain<br><br>
-                       2. IT, Department of Information Technology, InSilicoTrials Technologies, Trieste, Italy
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- API Modal -->
-    <div class="modal fade" id="docModal" tabindex="-1" aria-labelledby="docModalLabel" aria-hidden="true">
-      <div class="modal-dialog custom-modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="apiModalLabel">Abstract</h5>
-              </div>
-              <div class="modal-body">
-                <p>Introduction: Intervertebral Disc (IVD) Degeneration (IDD) is a significant health concern, potentially influenced by mechanotransduction. However, the relationship between the IVD phenotypes and mechanical behavior has not been thoroughly explored in local morphologies where IDD originates. This work unveils the interplays among morphological and mechanical features potentially relevant to IDD through Abaqus UMAT simulations.</p>
-
-                <p>Methods: A groundbreaking automated method is introduced to transform a calibrated, structured IVD finite element (FE) model into 169 patient-personalized (PP) models through a mesh morphing process. Our approach accurately replicates the real shapes of the patient's Annulus Fibrosus (AF) and Nucleus Pulposus (NP) while maintaining the same topology for all models. Using segmented magnetic resonance images from the former project MySpine, 169 models with structured hexahedral meshes were created employing the Bayesian Coherent Point Drift++ technique, generating a unique cohort of PP FE models under the Disc4All initiative. Machine learning methods, including Linear Regression, Support Vector Regression, and eXtreme Gradient Boosting Regression, were used to explore correlations between IVD morphology and mechanics.</p>
-                
-                <p>Results: We achieved PP models with AF and NP similarity scores of 92.06% and 92.10% compared to the segmented images. The models maintained good quality and integrity of the mesh. The cartilage endplate (CEP) shape was represented at the IVD-vertebra interfaces, ensuring personalized meshes. Validation of the constitutive model against literature data showed a minor relative error of 5.20%.</p>
-                
-                <p>Discussion: Analysis revealed the influential impact of local morphologies on indirect mechanotransduction responses, highlighting the roles of heights, sagittal areas, and volumes. While the maximum principal stress was influenced by morphologies such as heights, the disc's ellipticity influenced the minimum principal stress. Results suggest the CEPs are not influenced by their local morphologies but by those of the AF and NP. The generated free-access repository of individual disc characteristics is anticipated to be a valuable resource for the scientific community with a broad application spectrum.</p>
-                <p><a href="https://www.frontiersin.org/articles/10.3389/fbioe.2024.1384599/full">read more</a></p>
+              
+                <li class="logo" style="margin-top: 3px; margin-right: -9%;">
+                    <img src="spineview.png" alt="Logo">
+                </li>
+            </ul>
+        </nav>
+      
+      
+      <!-- Contributions Modal -->
+      <div class="modal fade" id="contributionsModal" tabindex="-1" aria-labelledby="contributionsModalLabel" aria-hidden="true">
+          <div class="modal-dialog custom-modal-dialog">
+              <div class="modal-content custom-modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="contributionsModalLabel">Contributions</h5>
+                  </div>
+                  <div class="modal-body">
+                      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+                      <table>
+                          <tr>
+                              <th>Author</th>
+                              <th><i class="fas fa-home" title="Home"></i></th>
+                              <th><i class="fas fa-envelope" title="Email"></i></th>
+                              <th><i class="fa-brands fa-square-x-twitter"></i></th>
+                              <th><i class="fab fa-github" title="GitHub"></i></th>
+                              <th><i class="fas fa-graduation-cap" title="Google Scholar"></i></th>
+                              <th><i class="fab fa-orcid" title="ORCID"></i></th>
+                              <th><i class="fab fa-researchgate" title="ResearchGate"></i></th>
+                              <th><i class="fab fa-linkedin" title="LinkedIn"></i></th>
+                              <th>
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 599 260" width="20" height="20">
+                                      <g fill="none" fill-rule="evenodd">
+                                          <path fill="#000" d="M483 180.265V249h-26V60h26v14.735C495.302 64.002 511.392 57.5 529 57.5c38.66 0 70 31.34 70 70s-31.34 70-70 70c-17.608 0-33.698-6.502-46-17.235zm46-6.765c-25.957 0-47-21.043-47-47s21.043-47 47-47 47 21.043 47 47-21.043 47-47 47zM0 0h25v156c0 10.667 7.667 16 23 16 1.333 4.667 4.333 11.667 9 21H34c-21 0-34-21-34-37V0zm382 197.5c-38.66 0-70-31.34-70-70s31.34-70 70-70 70 31.34 70 70-31.34 70-70 70zm0-24c25.957 0 47-21.043 47-47s-21.043-47-47-47-47 21.043-47 47 21.043 47 47 47z"/>
+                                          <path fill="#DA2032" d="M178 194c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64 35.346 0 64 28.654 64 64 0 35.346-28.654 64-64 64zm0-22c27.062 0 49-21.938 49-49s-21.938-49-49-49-49 21.938-49 49 21.938 49 49 49z"/>
+                                          <path fill="#F7941E" d="M178 214c-46.392 0-84-37.608-84-84s37.608-84 84-84 84 37.608 84 84-37.608 84-84 84zm3.5-18c39.488 0 71.5-32.012 71.5-71.5S220.988 53 181.5 53 110 85.012 110 124.5s32.012 71.5 71.5 71.5z"/>
+                                          <path fill="#D5CD25" d="M178 236c-58.542 0-106-47.458-106-106S119.458 24 178 24s106 47.458 106 106-47.458 106-106 106zm4-21c49.706 0 90-40.294 90-90s-40.294-90-90-90-90 40.294-90 90 40.294 90 90 90z"/>
+                                          <path fill="#757600" d="M178 260c-71.797 0-130-58.203-130-130S106.203 0 178 0s130 58.203 130 130-58.203 130-130 130zm5.5-21c61.027 0 110.5-49.473 110.5-110.5S244.527 18 183.5 18 73 67.473 73 128.5 122.473 239 183.5 239z"/>
+                                      </g>
+                                  </svg>
+                              </th>
+                          </tr>
+                          <!-- Example row for Estefano Munoz-Moya -->
+                          <tr>
+                              <td>Estefano Munoz-Moya <sup>1, ∗</sup></td>
+                              <td><a href="https://estefano23.github.io/">X</a></td>
+                              <td><a href="mailto:estefano.munoz.moya@gmail.com">X</a></td>
+                              <td><a href="https://x.com/estefanoMunoz23">X</a></td>
+                              <td><a href="https://github.com/estefano23/">X</a></td>
+                              <td><a href="https://scholar.google.com/citations?user=eT1mgk0AAAAJ&hl">X</a></td>
+                              <td><a href="https://orcid.org/0000-0001-5222-4071">X</a></td>
+                              <td><a href="https://www.researchgate.net/profile/Estefano-Munoz-Moya">X</a></td>
+                              <td><a href="https://www.linkedin.com/in/estefano-munoz-moya/">X</a></td>
+                              <td><a href="https://loop.frontiersin.org/people/1555265/publications">X</a></td>
+                          </tr>
+                          <!-- Add rows for other authors in the same format -->
+                          <tr>
+                              <td>Carlos Ruiz Wills <sup>2</sup></td>
+                              <td><a href="https://www.upf.edu/web/simbiosys/people/-/asset_publisher/XtdsMnNRpXfH/content/ruiz-wills-carlos/maximized">X</a></td>
+                              <td><a href="mailto:carlos.ruiz@upf.edu">X</a></td>
+                              <td><a href="https://twitter.com/cruizwills">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="https://scholar.google.com/citations?user=sCaJkkoAAAAJ">X</a></td>
+                              <td><a href="https://orcid.org/0000-0002-7475-8557">X</a></td>
+                              <td><a href="https://www.researchgate.net/profile/Carlos-Ruiz-Wills">X</a></td>
+                              <td><a href="https://es.linkedin.com/in/carlos-ruiz-wills-23924052">X</a></td>
+                              <td><a href="https://loop.frontiersin.org/people/588063/publications">X</a></td>
+                          </tr>
+                          <tr>
+                              <td>Morteza Rasouligandomani<sup>2</sup></td>
+                              <td><a href="https://www.upf.edu/web/simbiosys/people/-/asset_publisher/2h1s00p2oc8E/content/rasouligandomani-morteza/maximized">X</a></td>
+                              <td><a href="mailto:morteza.rasouli@upf.edu">X</a></td>
+                              <td><a href="https://twitter.com/MortezaRG">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="https://scholar.google.com/citations?user=GIiNE5MAAAAJ&hl=en&oi=sra">X</a></td>
+                              <td><a href="https://orcid.org/0000-0003-2396-2328">X</a></td>
+                              <td><a href="https://www.researchgate.net/profile/Morteza-Rasouligandomani">X</a></td>
+                              <td><a href="https://www.linkedin.com/in/morteza-rasouligandomani-4a68065a">X</a></td>
+                              <td><a href="https://loop.frontiersin.org/people/2138876/publications">X</a></td>
+                          </tr>
+                          <tr>
+                              <td>Francis Chemorion<sup>1,2</sup></td>
+                              <td><a href="https://disc4all.upf.edu/bio/francis-chemorion/">X</a></td>
+                              <td><a href="mailto:francis.chemorion01@estudiant.upf.edu">X</a></td>
+                              <td><a href="https://twitter.com/fkchemorion">X</a></td>
+                              <td><a href="https://github.com/kchemorion">X</a></td>
+                              <td><a href="https://scholar.google.com/citations?user=upAnje8AAAAJ&hl=en">X</a></td>
+                              <td><a href="https://orcid.org/0000-0002-2099-0035">X</a></td>
+                              <td><a href="https://www.researchgate.net/profile/Francis-Chemorion">X</a></td>
+                              <td><a href="https://www.linkedin.com/in/francis-chemorion/">X</a></td>
+                              <td><a href="https://loop.frontiersin.org/people/2449392/publications">X</a></td>
+                          </tr>
+                          <tr>
+                              <td>Gemma Piella<sup>2</sup></td>
+                              <td><a href="https://www.upf.edu/web/simbiosys/people/-/asset_publisher/dei3rtMP0xmk/content/piella-fenoy-gemma/maximized">X</a></td>
+                              <td><a href="mailto:gemma.piella@upf.edu">X</a></td>
+                              <td><a href="https://twitter.com/GemmaPiella">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="https://scholar.google.com/citations?user=Q6zjCpsAAAAJ&hl=en">X</a></td>
+                              <td><a href="https://orcid.org/0000-0001-5236-5819">X</a></td>
+                              <td><a href="https://www.researchgate.net/profile/Gemma-Piella">X</a></td>
+                              <td><a href="https://www.linkedin.com/in/gemma-piella-a234b4/">X</a></td>
+                              <td><a href="https://loop.frontiersin.org/people/383139/publications">X</a></td>
+                          </tr>
+                          <tr>
+                              <td>Jérôme Noailly<sup>1</sup></td>
+                              <td><a href="https://www.upf.edu/web/etic/computational-biology-and-biomedical-systems/-/asset_publisher/MKlA53ZqmAS8/content/noailly-j%C3%A9r%C3%B4me-bernard/maximized">X</a></td>
+                              <td><a href="mailto:jerome.noailly@upf.edu">X</a></td>
+                              <td><a href="https://twitter.com/jeromenoailly">X</a></td>
+                              <td><a href="#">X</a></td>
+                              <td><a href="https://scholar.google.es/citations?user=YFvwxpwAAAAJ&hl=ca&oi=sra">X</a></td>
+                              <td><a href="https://orcid.org/0000-0003-3446-7621">X</a></td>
+                              <td><a href="https://www.researchgate.net/profile/Jerome-Noailly-2">X</a></td>
+                              <td><a href="https://www.linkedin.com/in/jnoailly/">X</a></td>
+                              <td><a href="https://loop.frontiersin.org/people/59318/publications">X</a></td>
+                          </tr>
+                      </table>
+                      <br>
+                      <p>1. BCN MedTech, Department of Engineering, Universitat Pompeu Fabra, Barcelona, Spain<br><br>
+                         2. IT, Department of Information Technology, InSilicoTrials Technologies, Trieste, Italy
+                      </p>
+                  </div>
               </div>
           </div>
       </div>
-    </div>
-    
-
-    
-<!-- Downloads Modal -->
-<div class="modal fade" id="downloadsModal" tabindex="-1" aria-labelledby="downloadsModalLabel" aria-hidden="true">
-    <div class="modal-dialog custom-modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="downloadsModalLabel">Downloads</h5>
-            </div>
-            <div class="modal-body">
-                <div class="citation-box position-relative">
-                    <button class="copy-button btn btn-outline-secondary position-absolute" style="top: 0; right: 0;" id="copyButton">
-                        <i class="fa fa-copy"></i>
-                    </button>
-                    <pre id="citation-text" class="border p-3 text-wrap"> <br>
-                        Muñoz-Moya E, Rasouligandomani M, Ruiz Wills C, Chemorion FK, Piella G and Noailly J (2024) Unveiling interactions between intervertebral disc morphologies and mechanical behavior through personalized finite element modeling. Front. Bioeng. Biotechnol. 12:1384599. doi: 10.3389/fbioe.2024.1384599
-                    </pre>
+      
+      <!-- API Modal -->
+      <div class="modal fade" id="docModal" tabindex="-1" aria-labelledby="docModalLabel" aria-hidden="true">
+        <div class="modal-dialog custom-modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="apiModalLabel">Abstract</h5>
                 </div>
-                <div class="form-check agree-checkbox mt-3">
-                    <input type="checkbox" class="form-check-input" id="agreeCheckbox">
-                    <label class="form-check-label" for="agreeCheckbox">I agree to use the above citation when using this data.</label>
+                <div class="modal-body">
+                  <p>Introduction: Intervertebral Disc (IVD) Degeneration (IDD) is a significant health concern, potentially influenced by mechanotransduction. However, the relationship between the IVD phenotypes and mechanical behavior has not been thoroughly explored in local morphologies where IDD originates. This work unveils the interplays among morphological and mechanical features potentially relevant to IDD through Abaqus UMAT simulations.</p>
+  
+                  <p>Methods: A groundbreaking automated method is introduced to transform a calibrated, structured IVD finite element (FE) model into 169 patient-personalized (PP) models through a mesh morphing process. Our approach accurately replicates the real shapes of the patient's Annulus Fibrosus (AF) and Nucleus Pulposus (NP) while maintaining the same topology for all models. Using segmented magnetic resonance images from the former project MySpine, 169 models with structured hexahedral meshes were created employing the Bayesian Coherent Point Drift++ technique, generating a unique cohort of PP FE models under the Disc4All initiative. Machine learning methods, including Linear Regression, Support Vector Regression, and eXtreme Gradient Boosting Regression, were used to explore correlations between IVD morphology and mechanics.</p>
+                  
+                  <p>Results: We achieved PP models with AF and NP similarity scores of 92.06% and 92.10% compared to the segmented images. The models maintained good quality and integrity of the mesh. The cartilage endplate (CEP) shape was represented at the IVD-vertebra interfaces, ensuring personalized meshes. Validation of the constitutive model against literature data showed a minor relative error of 5.20%.</p>
+                  
+                  <p>Discussion: Analysis revealed the influential impact of local morphologies on indirect mechanotransduction responses, highlighting the roles of heights, sagittal areas, and volumes. While the maximum principal stress was influenced by morphologies such as heights, the disc's ellipticity influenced the minimum principal stress. Results suggest the CEPs are not influenced by their local morphologies but by those of the AF and NP. The generated free-access repository of individual disc characteristics is anticipated to be a valuable resource for the scientific community with a broad application spectrum.</p>
+                  <p><a href="https://www.frontiersin.org/articles/10.3389/fbioe.2024.1384599/full">read more</a></p>
                 </div>
-                <button class="btn btn-primary mt-3" id="downloadButton" disabled>Complete .INP file download</button>
             </div>
         </div>
-    </div>
-</div>
-
-
-<script>
-    // Existing code for handling URL parameters and file operations
-    const urlParams = new URLSearchParams(window.location.search);
-    let filenamePrefix = urlParams.get('filenamePrefix') || 'GENERIC_L4L5';
-
-    let [modelName, modelLevel] = filenamePrefix.split('_');
-
-    // Update the navigation bar with the model name and level
-    document.getElementById('modelName').textContent = modelName;
-    document.getElementById('modelLevel').textContent = modelLevel;
-    
-    // Define common suffixes for the filenames
-    const suffixes = [
-        "_AF.stl",
-        "_CEP.stl",
-        "_NP.stl",
-    ];
-
-    // Map suffixes to colors
-    const suffixColors = {
-        "_AF.stl": "#FF0000",
-        "_CEP.stl": "#FF0000",
-        "_NP.stl": "#FF0000",
-    };
-
-    // Generate filenames based on the prefix and common suffixes
-    const filenames = suffixes.map(suffix => `${filenamePrefix}${suffix}`);
-    
-    function openFiles() {
-        filenames.forEach((filename) => {
-            MLJ.core.File.openMeshFileFromUrl(filename);
-        });
-    }
-
-    // Custom function to apply color to a mesh
-    function applyColorToMesh(mesh, colorHex) {
-        // Check if the mesh and its material are valid
-        if (mesh && mesh.material) {
-            mesh.material.color = new THREE.Color(colorHex);
-            mesh.material.needsUpdate = true;
-        } else {
-            // console.error("Mesh or material not found for color application.");
-        }
-    }
-
-    // Modified event handler
-    $(document).on("MeshFileOpened", function (event, meshFile) {
-        const filename = meshFile.fileName;
-        const suffix = filename.substring(filename.lastIndexOf('_'));
-        const color = suffixColors[suffix] || "defaultColor";
-
-        // Apply color to the mesh
-        applyColorToMesh(meshFile.threeMesh, color);
-
-        // Re-render the scene to reflect color changes
-        MLJ.core.Scene.render();
-    });
-
-    MLJ.core.plugin.Manager.run();
-    MLJ.gui.makeGUI("");
-    Module['onRuntimeInitialized'] = function() {
-        openFiles();
-    };
-
-    // New code for handling modal functionalities
-
-    // Function to copy text to clipboard
-    function copyCitation() {
-        const citationText = document.getElementById('citation-text').innerText;
-        const textarea = document.createElement('textarea');
-        textarea.value = citationText;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-
-        // Optional: Show a confirmation message
-        alert('Citation copied to clipboard');
-    }
-
-    // Function to toggle download button state
-    function toggleDownloadButton() {
-        const checkbox = document.getElementById('agreeCheckbox');
-        const downloadButton = document.getElementById('downloadButton');
-        downloadButton.disabled = !checkbox.checked;
-
-        // Dynamically set the href attribute based on checkbox state
-        if (checkbox.checked) {
-            downloadButton.onclick = function() {
-                window.location.href = 'https://zenodo.org/records/8325042';
-            };
-        } else {
-            downloadButton.onclick = null;
-        }
-    }
-
-    // Event listener for the checkbox to toggle download button state
-    document.getElementById('agreeCheckbox').addEventListener('change', toggleDownloadButton);
-
-    // Initialize download button state
-    toggleDownloadButton();
-
-    // Event listener for the copy button to copy text
-    document.getElementById('copyButton').addEventListener('click', copyCitation);
-
-</script>
-
-    
+      </div>
+      
   
-        
-    </body>
-
-
-</html>
+      
+  <!-- Downloads Modal -->
+  <div class="modal fade" id="downloadsModal" tabindex="-1" aria-labelledby="downloadsModalLabel" aria-hidden="true">
+      <div class="modal-dialog custom-modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="downloadsModalLabel">Downloads</h5>
+              </div>
+              <div class="modal-body">
+                  <div class="citation-box position-relative">
+                      <button class="copy-button btn btn-outline-secondary position-absolute" style="top: 0; right: 0;" id="copyButton">
+                          <i class="fa fa-copy"></i>
+                      </button>
+                      <pre id="citation-text" class="border p-3 text-wrap"> <br>
+                          Muñoz-Moya E, Rasouligandomani M, Ruiz Wills C, Chemorion FK, Piella G and Noailly J (2024) Unveiling interactions between intervertebral disc morphologies and mechanical behavior through personalized finite element modeling. Front. Bioeng. Biotechnol. 12:1384599. doi: 10.3389/fbioe.2024.1384599
+                      </pre>
+                  </div>
+                  
+                  <div class="citation-box position-relative mt-3">
+                      <button class="copy-button btn btn-outline-secondary position-absolute" style="top: 0; right: 0;" id="copyButton2">
+                          <i class="fa fa-copy"></i>
+                      </button>
+                      <pre id="citation-text2" class="border p-3 text-wrap"> <br>
+                          E. Muñoz-Moya, M. Rasouligandomani, C. Ruiz Wills, F. Chemorion, G. Piella, and J. Noailly, "Repository of IVD Patient-Specific FE Models," data set, Frontiers in Bioengineering and Biotechnology, vol. 12, Sep. 2023. [Online]. Available: https://doi.org/10.5281/zenodo.8325042
+                      </pre>
+                  </div>
+                  
+                  <div class="form-check agree-checkbox mt-3">
+                      <input type="checkbox" class="form-check-input" id="agreeCheckbox">
+                      <label class="form-check-label" for="agreeCheckbox">I agree to use the above citation when using this data.</label>
+                  </div>
+                  <button class="btn btn-primary mt-3" id="downloadButton" disabled>Complete .INP file download</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+  <script>
+      // Existing code for handling URL parameters and file operations
+      const urlParams = new URLSearchParams(window.location.search);
+      let filenamePrefix = urlParams.get('filenamePrefix') || 'GENERIC_L4L5';
+  
+      let [modelName, modelLevel] = filenamePrefix.split('_');
+  
+      // Update the navigation bar with the model name and level
+      document.getElementById('modelName').textContent = modelName;
+      document.getElementById('modelLevel').textContent = modelLevel;
+      
+      // Define common suffixes for the filenames
+      const suffixes = [
+          "_AF.stl",
+          "_CEP.stl",
+          "_NP.stl",
+      ];
+  
+      // Map suffixes to colors
+      const suffixColors = {
+          "_AF.stl": "#FF0000",
+          "_CEP.stl": "#FF0000",
+          "_NP.stl": "#FF0000",
+      };
+  
+      // Generate filenames based on the prefix and common suffixes
+      const filenames = suffixes.map(suffix => `${filenamePrefix}${suffix}`);
+      
+      function openFiles() {
+          filenames.forEach((filename) => {
+              MLJ.core.File.openMeshFileFromUrl(filename);
+          });
+      }
+  
+      // Custom function to apply color to a mesh
+      function applyColorToMesh(mesh, colorHex) {
+          // Check if the mesh and its material are valid
+          if (mesh && mesh.material) {
+              mesh.material.color = new THREE.Color(colorHex);
+              mesh.material.needsUpdate = true;
+          } else {
+              // console.error("Mesh or material not found for color application.");
+          }
+      }
+  
+      // Modified event handler
+      $(document).on("MeshFileOpened", function (event, meshFile) {
+          const filename = meshFile.fileName;
+          const suffix = filename.substring(filename.lastIndexOf('_'));
+          const color = suffixColors[suffix] || "defaultColor";
+  
+          // Apply color to the mesh
+          applyColorToMesh(meshFile.threeMesh, color);
+  
+          // Re-render the scene to reflect color changes
+          MLJ.core.Scene.render();
+      });
+  
+      MLJ.core.plugin.Manager.run();
+      MLJ.gui.makeGUI("");
+      Module['onRuntimeInitialized'] = function() {
+          openFiles();
+      };
+  
+      // New code for handling modal functionalities
+  
+      // Function to copy text to clipboard
+      function copyCitation(elementId) {
+          const citationText = document.getElementById(elementId).innerText;
+          const textarea = document.createElement('textarea');
+          textarea.value = citationText;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+  
+          // Optional: Show a confirmation message
+          alert('Citation copied to clipboard');
+      }
+  
+      // Function to toggle download button state
+      function toggleDownloadButton() {
+          const checkbox = document.getElementById('agreeCheckbox');
+          const downloadButton = document.getElementById('downloadButton');
+          downloadButton.disabled = !checkbox.checked;
+  
+          // Dynamically set the href attribute based on checkbox state
+          if (checkbox.checked) {
+              downloadButton.onclick = function() {
+                  window.location.href = 'https://zenodo.org/records/8325042';
+              };
+          } else {
+              downloadButton.onclick = null;
+          }
+      }
+  
+      // Event listener for the checkbox to toggle download button state
+      document.getElementById('agreeCheckbox').addEventListener('change', toggleDownloadButton);
+  
+      // Initialize download button state
+      toggleDownloadButton();
+  
+      // Event listener for the copy buttons to copy text
+      document.getElementById('copyButton').addEventListener('click', function() {
+          copyCitation('citation-text');
+      });
+      document.getElementById('copyButton2').addEventListener('click', function() {
+          copyCitation('citation-text2');
+      });
+  
+  </script>
+  
+      
+    
+          
+      </body>
+  
+  
+  </html>
+  
