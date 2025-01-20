@@ -1,14 +1,35 @@
-# Use the Nginx image from Docker Hub
-FROM nginx:alpine
+# Use a lightweight Python image as required by tutorial
+FROM python:3.9-slim
 
-# Copy the custom Nginx config file into Nginx
-COPY default.conf /etc/nginx/conf.d/default.conf
+# Set the working directory inside the container
+WORKDIR /home/
 
-# Copy the static website files into the Nginx server
-COPY . /usr/share/nginx/html
+# Install necessary packages (nginx and python dependencies)
+RUN apt-get update && apt-get install -y nginx \
+    && pip install flask gunicorn  # Using Flask for Python web serving
 
-# Expose port 8889
+# Copy your web files
+COPY . /home/web/
+
+# Create a simple Flask wrapper to serve your static files
+COPY <<'EOF' /home/web_server.py
+from flask import Flask, send_from_directory
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return send_from_directory('/home/web', 'index.html')
+
+@app.route('/<path:path>')
+def serve_file(path):
+    return send_from_directory('/home/web', path)
+EOF
+
+# Make the Python script executable
+RUN chmod +x /home/web_server.py
+
+# Expose port 80
 EXPOSE 80
 
-# Start Nginx when the container has provisioned.
-CMD ["nginx", "-g", "daemon off;"]
+# Define the entry point for the container
+ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:80", "web_server:app"]
