@@ -1,0 +1,117 @@
+{
+    "_id": "ivd_viewer",
+    "name": "IVD Viewer",
+    "title": "IVD Viewer",
+    "short_description": "Interactive viewer for patient-specific spine models",
+    "long_description": "The IVD Viewer is an interactive tool designed to visualize 169 patient-specific spine models generated through mesh morphing techniques.",
+    "url": "https://github.com/SpineView1/ivd",
+    "publication": "",
+    "owner": {
+      "author": "SpineView Team",
+      "institution": "Universitat Pompeu Fabra",
+      "contact": "spineview@upf.edu",
+      "url": "https://spineview.upf.edu"
+    },
+    "status": 1,
+    "external": true,
+    "keywords": [
+      "viewer",
+      "spine",
+      "3D visualization",
+      "patient-specific models"
+    ],
+    "keywords_tool": [],
+    "infrastructure": {
+      "memory": 512,
+      "cpus": 1,
+      "interactive": true,
+      "executable": "gunicorn --bind 0.0.0.0:80 web_server:app",
+      "container_image": "ivd_viewer_image",
+      "container_port": "80",
+      "container_env": {
+        "host": "0.0.0.0",
+        "port": "80"
+      },
+      "clouds": {
+        "local": {
+          "launcher": "docker",
+          "default_cloud": true
+        }
+      },
+      "free_port": "9001"
+    },
+    "input_files": [
+      {
+        "name": "mesh_file",
+        "description": "3D mesh file of the spine model",
+        "help": "Upload the 3D mesh file in STL format for visualization",
+        "file_type": [
+          "STL"
+        ],
+        "data_type": [
+          "3d_model",
+          "spine_mesh"
+        ],
+        "required": true,
+        "allow_multiple": false
+      }
+    ],
+    "input_files_public_dir": [
+      {
+        "name": "yaml_config",
+        "description": "IVD Viewer configuration file",
+        "help": "Configuration file for setting up the IVD Viewer",
+        "file_type": [
+          "YAML"
+        ],
+        "data_type": [
+          "configuration_file"
+        ],
+        "type": "hidden",
+        "value": "ivd/ivd-viewer-config.yaml",
+        "required": true,
+        "allow_multiple": false
+      }
+    ],
+    "has_custom_viewer": true,
+    "custom_viewer": "3D_Viewer",
+    "custom_viewer_description": "A tool for visualizing 3D spine structures and analyzing patient-specific models.",
+    "output_files": [
+      {
+        "name": "output",
+        "required": true,
+        "allow_multiple": false,
+        "file": {
+          "file_type": "TXT",
+          "data_type": "analysis_results",
+          "meta_data": {
+            "visible": true,
+            "description": "TXT file containing analysis results of the spine model.",
+            "tool": "ivd_viewer"
+          }
+        }
+      }
+    ],
+    "sites": [
+      {
+        "status": 1,
+        "site_id": "local"
+      }
+    ],
+    "input_files_combinations": [
+      {
+        "description": "Patient-Specific Spine Models",
+        "input_files": [
+          "3d_model",
+          "spine_mesh"
+        ]
+      }
+    ],
+    "input_files_combinations_internal": [
+      {
+        "3d_model": "+",
+        "spine_mesh": "+"
+      }
+    ]
+  }
+  
