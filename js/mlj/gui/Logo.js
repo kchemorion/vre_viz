@@ -26,7 +26,7 @@
 
             _dialog.appendContent(
                 '<div class="airtable-embed">'
-                + '<iframe title="SpineView" width="1200px" height="600px" src="https://app.powerbi.com/view?r=eyJrIjoiZWFhMGM4YWUtODcwOS00Y2EyLTg5ZGUtZTNmZmUxNjkwZDc5IiwidCI6IjQyZTFiNDJmLWRlNzQtNDI5MC05ZDNhLTExNDkyNTUzMTM1ZSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>'
+                + '<iframe title="SpineView" width="1200px" height="600px" src="https://app.powerbi.com/view?r=eyJrIjoiNmI5NjhkNWUtOTc4Mi00NDlhLTk3MjEtZDU4MjQ2ZGUyZjZiIiwidCI6IjQyZTFiNDJmLWRlNzQtNDI5MC05ZDNhLTExNDkyNTUzMTM1ZSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>'
                 + '</div>' + MLJ.core.plugin.Manager.getFilterPlugins().size() + " filters."
             );
 
